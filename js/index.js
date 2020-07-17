@@ -62,8 +62,8 @@ function touchdown(event){
     painting= true;
     var touch = event.touches[0];
     // or taking offset into consideration
-    var x = touch.pageX - canvas.offsetLeft;
-    var y = touch.pageY - canvas.offsetTop;
+    var x = touch.clientX - canvas.offsetLeft;
+    var y = touch.clientY - canvas.offsetTop;
     ctx1.moveTo(x,y)
     console.log(x+" "+y)
 }
@@ -72,8 +72,8 @@ function touchmove(event){
     if(painting){
         var touch = event.touches[0];
         // or taking offset into consideration
-        var x = touch.pageX - canvas.offsetLeft;
-        var y = touch.pageY - canvas.offsetTop;
+        var x = touch.clientX - canvas.offsetLeft;
+        var y = touch.clientY - canvas.offsetTop;
         ctx1.lineTo(x,y)
     }
     ctx1.stroke()
