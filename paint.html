@@ -59,9 +59,9 @@
     </div>
   </div>
         
-            <div class="canvas">
-                <canvas  id="paint" onmousedown="mousedown(event)" onmousemove="mousemove(event)" onmouseup="mouseup(event)"></canvas>
-                <canvas width="100%" height="100%" id="paint1" ontouchstart="touchdown(event)" ontouchend="touchup(event)" ontouchmove="touchmove(event)"></canvas>
+            <div class="canvas" onmousedown="mousedown(event)" onmousemove="mousemove(event)" onmouseup="mouseup(event)" onmouseleave="mouseup(event)" ontouchstart="touchdown(event)" ontouchend="touchup(event)" ontouchleave="touchup(event)" ontouchmove="touchmove(event)">
+                <canvas  id="paint" ></canvas>
+                <canvas  id="paint1" ></canvas>
             </div>
 
 <script>
