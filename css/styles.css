@@ -47,21 +47,24 @@ canvas{
     width: 100%;
     background: #ffffff;
 }
-#paint1{
-    display: none;
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:20px;
+    color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }
-#paint{
-    display: block;
+
+.my-float{
+	margin-top:22px;
 }
 @media screen and (max-width: 650px){
     .canvas{
         height: 70%;
         width: 90%;
-    }
-    #paint{
-        display: none;
-    }
-    #paint1{
-        display: block;
     }
 }
