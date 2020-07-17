@@ -9,6 +9,9 @@ body{
     background-repeat: no-repeat;
     overflow: hidden;
 }
+html{
+    overflow: hidden;
+}
 .heading{
     padding-top: 3%;
 }
