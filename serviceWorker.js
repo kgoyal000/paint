@@ -77,6 +77,12 @@ self.addEventListener('push', function(event) {
 const showLocalNotification = (title, body, swRegistration) => {
   const options = {
     body,
+    icon: 'images/icons/icon-5.png',
+        vibrate: [100, 50, 100],
+        data: {
+          dateOfArrival: Date.now(),
+          primaryKey: 1
+        }
     // here you can add more properties like icon, image, vibrate, etc.
   }
   swRegistration.showNotification(title, options)
