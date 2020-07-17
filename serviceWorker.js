@@ -1,10 +1,10 @@
 const staticDevCoffee = "paint-app-v1"
 const assets = [
   "/",
-  "/paint.html",
-  "/css/styles.css",
-  "/js/index.js",
-  "/images/background.png"
+  "./paint.html",
+  "./css/styles.css",
+  "./js/index.js",
+  "./images/background.png"
 ]
 
 self.addEventListener("install", installEvent => {
