@@ -2,7 +2,10 @@ var painting = false;
 var erasing = false;
 var canvas = document.getElementById('paint');
 var canvasMob = document.getElementById('paint1');
-
+canvas.height = document.querySelector('.canvas').clientHeight;
+canvas.width = document.querySelector('.canvas').clientWidth;
+canvasMob.height = document.querySelector('.canvas').clientHeight;
+canvasMob.width = document.querySelector('.canvas').clientWidth;
 
 var ctx = canvas.getContext('2d');
 var ctx1 = canvasMob.getContext('2d');
@@ -74,7 +77,6 @@ function touchmove(event){
         ctx1.lineTo(x,y)
     }
     ctx1.stroke()
-
 }
 
 function touchup(event){
