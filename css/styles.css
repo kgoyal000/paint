@@ -1,0 +1,47 @@
+body{
+    min-height: 100vh;
+    height: 108vh;
+    width: 100%;
+    background: url('/images/background.png');
+    background-color: #303030;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.heading{
+    padding-top: 3%;
+}
+
+.cursor{
+    width: 5px;
+    height: 5px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 50%;
+    margin: 1.4% auto;
+}
+
+.range-slider {
+    width: 20%;
+    margin: 0 auto;
+  }
+
+    /* background: #2c3e50; */
+.canvas{
+    height: 50%;
+    width: 60%;
+    margin: 1% auto;
+    border: 1px solid black;
+    cursor: url('/images/cursor.png'), default;
+}
+canvas{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+@media screen and (max-width: 650px){
+    .canvas{
+        height: 70%;
+        width: 90%;
+    }
+}
