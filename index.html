@@ -95,10 +95,10 @@
               </div>  
               </a>
 <script>
-  navigator.serviceWorker.getRegistrations().then(function(registrations) {
-    for(let registration of registrations) {
-     registration.unregister()
-   } })
+//  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+ //   for(let registration of registrations) {
+ //    registration.unregister()
+  // } })
   const check = () => {
     if (!('serviceWorker' in navigator)) {
       throw new Error('No Service Worker support!')
