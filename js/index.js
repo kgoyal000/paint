@@ -49,13 +49,11 @@ function mousedown(event){
 function mousemove(event){
     if(painting){
         ctx.strokeStyle = $('#color').val();
-        ctx1.strokeStyle = $('#color').val();
         var x = event.pageX - canvas.offsetLeft;     // Get the horizontal coordinate
         var y = event.pageY - canvas.offsetTop;  
         ctx.lineTo(x,y)
         if(erasing){
             ctx.strokeStyle = '#ffffff';
-            ctx1.strokeStyle = '#ffffff';
         }
         ctx.stroke()
     }
@@ -78,11 +76,16 @@ function touchdown(event){
 
 function touchmove(event){
     if(painting){
+        ctx1.strokeStyle = $('#color').val();
         var touch = event.touches[0];
         // or taking offset into consideration
         var x = touch.pageX - canvasMob.offsetLeft;
         var y = touch.pageY - canvasMob.offsetTop;
-        ctx1.lineTo(x,y)
+        if(erasing){
+            ctx.strokeStyle = '#ffffff';
+            ctx1.strokeStyle = '#ffffff';
+        }
+        ctx1.lineTo(x,y)        
     }
     ctx1.stroke()
 }
