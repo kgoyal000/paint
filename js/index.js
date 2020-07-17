@@ -1,4 +1,3 @@
-localStorage.clear();  
 var painting = false;
 var erasing = false;
 var canvas = document.getElementById('paint');
