@@ -109,6 +109,15 @@ $("#save").click(function(){
 
     function download() {
         var download = document.getElementById("download");
+        // set the ctx to draw beneath your current content
+        ctx.globalCompositeOperation = 'destination-over';
+
+// set the fill color to white
+        ctx.fillStyle = 'white';
+
+// apply fill starting from point (0,0) to point (canvas.width,canvas.height)
+// these two points are the top left and the bottom right of the canvas
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         var image = document.getElementById("paint").toDataURL("image/png")
             .replace("image/png", "image/octet-stream");
         download.setAttribute("href", image);
