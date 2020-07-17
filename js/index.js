@@ -1,22 +1,31 @@
 var painting = false;
 var erasing = false;
 var canvas = document.getElementById('paint');
+var canvasMob = document.getElementById('paint1');
+
 
 var ctx = canvas.getContext('2d');
+var ctx1 = canvasMob.getContext('2d');
 ctx.beginPath();
 ctx.lineWidth = 1;
 ctx.lineCap = "round";
 ctx.lineJoin = "round";
+ctx1.beginPath();
+ctx1.lineWidth = 1;
+ctx1.lineCap = "round";
+ctx1.lineJoin = "round";
 function slider(){
     let slideValue = $('#slider').val()
     $('.cursor').css('width',slideValue);
     $('.cursor').css('height',slideValue);
     ctx.lineWidth = slideValue;
+    ctx1.lineWidth = slideValue;
 }
 
 function colorChange(){
     $('.cursor').css('background-color',$('#color').val());
     ctx.strokeStyle = $('#color').val();
+    ctx1.strokeStyle = $('#color').val();
 }
 
 function erase(){
@@ -52,7 +61,7 @@ function touchdown(event){
     // or taking offset into consideration
     var x = touch.pageX - canvas.offsetLeft;
     var y = touch.pageY - canvas.offsetTop;
-    ctx.moveTo(x,y)
+    ctx1.moveTo(x,y)
     console.log(x+" "+y)
 }
 
@@ -62,9 +71,9 @@ function touchmove(event){
         // or taking offset into consideration
         var x = touch.pageX - canvas.offsetLeft;
         var y = touch.pageY - canvas.offsetTop;
-        ctx.lineTo(x,y)
+        ctx1.lineTo(x,y)
     }
-    ctx.stroke()
+    ctx1.stroke()
 
 }
 

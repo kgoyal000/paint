@@ -9,9 +9,10 @@ body{
     background-repeat: no-repeat;
     overflow: hidden;
 }
-html{
+html,canvas,.canvas{
     overflow: hidden;
 }
+
 .heading{
     padding-top: 3%;
 }
@@ -44,9 +45,21 @@ canvas{
     width: 100%;
     background: #ffffff;
 }
+#paint1{
+    display: none;
+}
+#paint{
+    display: block;
+}
 @media screen and (max-width: 650px){
     .canvas{
         height: 70%;
         width: 90%;
+    }
+    #paint{
+        display: none;
+    }
+    #paint1{
+        display: block;
     }
 }
