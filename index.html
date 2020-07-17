@@ -138,7 +138,7 @@ const main = async () => { //notice I changed main to async function so that I c
     check();
     const swRegistration = await registerServiceWorker();
     const permission =  await requestNotificationPermission();
-    //showLocalNotification('Thanks For Checking', 'Please Click Add to home for better experience', swRegistration);
+    showLocalNotification('Thanks For Checking', 'Please Click Add to home for better experience', swRegistration);
 }
 main();
 /*    if ("serviceWorker" in navigator) {
