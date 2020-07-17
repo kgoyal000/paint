@@ -7,10 +7,12 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    -webkit-overflow-scrolling:touch;
     overflow: hidden;
 }
 html,canvas,.canvas{
     overflow: hidden;
+    -webkit-overflow-scrolling:touch;
 }
 
 .heading{
